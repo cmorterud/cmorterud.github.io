@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+{% avatar [site.github_username] %}
+
 Cody Morterud is a Computer Science Engineering student at the
 University of Michigan, Ann Arbor. Currently, his favorite
 languages are C# and Python. He has previously worked at Quicken Loans
