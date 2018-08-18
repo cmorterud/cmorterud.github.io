@@ -23,6 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://codymorterud.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  CMorterud
+linkedin_username: cody-morterud-b7582a110
 
 avatar: https://avatars0.githubusercontent.com/u/18387442?s=400&u=1abc5efcd1cd513a5aca8e1f215e2dc05886719e&v=4
 
