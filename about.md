@@ -3,8 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-
-{% avatar [site.github_username] %}
+{% avatar {{ site.github_username }} size=200 %}
 
 Cody Morterud is a Computer Science Engineering student at the
 University of Michigan, Ann Arbor. Currently, his favorite
