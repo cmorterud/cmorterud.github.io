@@ -102,7 +102,7 @@ and that no one else is able to access it.
 {% highlight bash %}
 You need a Passphrase to protect your secret key.
 
-You don't want a passphrase - this is probably a *bad* idea!
+You do not want a passphrase - this is probably a *bad* idea!
 I will do it anyway.  You can change your passphrase at any time,
 using this program with the option "--edit-key".
 {% endhighlight %}
@@ -227,6 +227,7 @@ and
 [GnuPG User Manual](https://www.gnupg.org/gph/en/manual/c14.html)
 
 
-Thanks for reading! Please emaillet me know if there are any questions
+Thanks for reading! Please let me know if there are any questions
+or comments
 at {{ site.email }}.
 
