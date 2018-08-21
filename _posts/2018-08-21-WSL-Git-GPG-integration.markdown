@@ -222,8 +222,9 @@ signing commits and getting the nice looking "Verified" stamps
 in your commit history.
 
 For further reading, refer to 
-https://git-scm.com/book/id/v2/Git-Tools-Signing-Your-Work
-https://www.gnupg.org/gph/en/manual/c14.html
+[The Git Handbook](https://git-scm.com/book/id/v2/Git-Tools-Signing-Your-Work)
+and 
+[GnuPG User Manual](https://www.gnupg.org/gph/en/manual/c14.html)
 
 
 Thanks for reading! Please emaillet me know if there are any questions
