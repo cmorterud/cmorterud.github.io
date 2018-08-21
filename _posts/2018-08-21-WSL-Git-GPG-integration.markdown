@@ -221,6 +221,11 @@ Github, and then if everything works out, you can start
 signing commits and getting the nice looking "Verified" stamps
 in your commit history.
 
-Thanks for reading! Please let me know if there are any questions
-at {{ site.email }}
+For further reading, refer to 
+https://git-scm.com/book/id/v2/Git-Tools-Signing-Your-Work
+https://www.gnupg.org/gph/en/manual/c14.html
+
+
+Thanks for reading! Please emaillet me know if there are any questions
+at {{ site.email }}.
 
