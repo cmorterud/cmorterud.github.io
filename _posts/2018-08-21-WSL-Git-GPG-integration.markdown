@@ -38,6 +38,15 @@ $ sudo apt-get install git --yes
 # --yes is to automatically insert yes at prompts
 {% endhighlight %}
 
+For sanity's sake, I will print out the version of gpg and bash that I am using
+{% highlight bash %}
+$ gpg --version
+gpg (GnuPG) 1.4.20
+$ bash --version
+GNU bash, version 4.3.48(1)-release (x86_64-pc-linux-gnu)
+{% endhighlight %}
+
+
 To generate a key, type
 
 {% highlight bash %}
