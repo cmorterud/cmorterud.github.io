@@ -152,4 +152,6 @@ the lesser of $$p$$ and $$q$$.
 
 [Source for Extended Euclidean Algorithm](https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm)
 
+[More on modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic)
+
 
