@@ -9,7 +9,7 @@ categories: development
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
 Jekyll also offers powerful support for code snippets: -->
-<!-- 
+<!--
 I have been a longtime macOS user since I started college, staying
 as far away from Windows as I could. That was mainly due to my college's use
 of Red Hat Enterprise Linux and macOS's command line utilities and Homebrew
@@ -22,7 +22,7 @@ Introduction to Cryptography where I learned about secure systems,
 cryptographic schemes, authentication, abstract algebra, and more.
 I was introduced to GnuPG as a program that abstracts away all
 but the most essential details of encryption, and I was very impressed
-with the capabilities and power that GnuPG provides to the user. 
+with the capabilities and power that GnuPG provides to the user.
 
 Let's say you are interested in signing your Git commits. There is much
 more that can be signed, but signing Git commits can be automated once
@@ -85,8 +85,8 @@ Key is valid for? (0)
 I hit enter to select "key does not expire," although, one could
 choose to have the key become invalid (untrusted) in a certain amount of time.
 If you choose to have the key expire in a certain amount of time,
-then you will need to tell git about the new key when used to  automatically 
-sign 
+then you will need to tell git about the new key when used to  automatically
+sign
 commits and/or tags, which we will talk about later in this post.
 
 {% highlight bash %}
@@ -225,18 +225,17 @@ A++0YGCjliqd39fOixrB
 -----END PGP PUBLIC KEY BLOCK-----
 {% endhighlight %}
 
-You need to paste that huge chunk of text into the textbox given on 
+You need to paste that huge chunk of text into the textbox given on
 Github, and then if everything works out, you can start
 signing commits and getting the nice looking "Verified" stamps
 in your commit history.
 
-For further reading, refer to 
+For further reading, refer to
 [The Git Handbook](https://git-scm.com/book/id/v2/Git-Tools-Signing-Your-Work)
-and 
+and
 [GnuPG User Manual](https://www.gnupg.org/gph/en/manual/c14.html)
 
 
 Thanks for reading! Please let me know if there are any questions
 or comments
-at {{ site.email }}.
-
+at [{{ site.email }}](mailto:{{ site.email }}).

@@ -9,7 +9,7 @@ categories: development
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
 Jekyll also offers powerful support for code snippets: -->
-<!-- 
+<!--
 I have been a longtime macOS user since I started college, staying
 as far away from Windows as I could. That was mainly due to my college's use
 of Red Hat Enterprise Linux and macOS's command line utilities and Homebrew
@@ -17,7 +17,7 @@ out of the box being
 a near approximation for RHEL's utilities.  -->
 
 RSA stands for Rivest, Shamir, and Adleman. The most common usage
-of RSA is the cryptosystem, one of the first asymmetric 
+of RSA is the cryptosystem, one of the first asymmetric
 cryptosystem. By asymmetric, I mean that the key to encrypt and
 the key to decrypt are different, as opposed to a system like the
 Advanced Encryption Standard, where the key used to encrypt and decrypt
@@ -34,12 +34,12 @@ and then Bob can use the known public key to decrypt the message,
 meaning that the given message could only have come from Alice.
 
 Together, Alice and Bob can each generate a RSA keypair,
-and use those to communicate securely. 
+and use those to communicate securely.
 
-When Gnu Privacy Guard 
+When Gnu Privacy Guard
 otherwise known as GPG uses your RSA private key to sign
 a message, and someone else's RSA public key to encrypt a message,
-GPG is just performing RSA encryption with your private key, and then 
+GPG is just performing RSA encryption with your private key, and then
 RSA encryption with someone else's RSA public key.
 
 ## Walkthrough
@@ -57,7 +57,7 @@ values are private. I picked those at random.
 
 Next, let $$n=pq=779$$. $$n$$ is used as a modulus in the RSA cryptosystem.
 
-Next, we need to compute Euler's totient function for $$n$$, 
+Next, we need to compute Euler's totient function for $$n$$,
 which is $$\lambda(n)$$. Euler's totient function is defined for
 an integer $$x$$ as the count of numbers less than $$x$$ that are relatively
 prime to $$x$$, which in layman's term means the amount of integers
@@ -69,13 +69,13 @@ This is possible because Euler's totient function has
 the property of multiplicativity.  This is a private
 value.
 
-Next, we need to find an integer $$e$$ such that $$1<e<\lambda(n)$$ and 
+Next, we need to find an integer $$e$$ such that $$1<e<\lambda(n)$$ and
 the greatest common denominator of the totient of $$n$$ and $$e$$ is 1, or
 $$gcd(e, \lambda(n))=1$$. For this example, I choose 7.
 
 Lastly, we need to find an integer $$d$$ such that
-$$d\equiv e^{-1}\mod \lambda(n)$$, which means that $$d$$ is the 
-modular multiplicative inverse of $$e$$ modulo $$\lambda(n)$$. This 
+$$d\equiv e^{-1}\mod \lambda(n)$$, which means that $$d$$ is the
+modular multiplicative inverse of $$e$$ modulo $$\lambda(n)$$. This
 is the first part where the math gets tricky, but I can give an algorithm
 written in Python that will find the value $$d$$ given $$e$$
 and $$\lambda(n)$$.
@@ -139,14 +139,14 @@ $ python3
 {% endhighlight %}
 Thus, we have successfully encrypted and decrypted an message.
 
-The message of 5 isn't very useful, but for example, one could convert 
+The message of 5 isn't very useful, but for example, one could convert
 ASCII characters into integers, and then individually encrypt each character.
 That would probably take too long, so an optimization would be encrypting
 a number that represents for example 4 characters, or 8, or 16, or so on,
 up unto the maximum integer that can be encrypted, which is 1 less than
 the lesser of $$p$$ and $$q$$.
 
-Please feel free to email me at {{ site.email }} with any questions or concerns!
+Please feel free to email me at [{{ site.email }}](mailto:{{ site.email }}) with any questions or concerns!
 
 
 # Sources
@@ -155,5 +155,3 @@ Please feel free to email me at {{ site.email }} with any questions or concerns!
 [Source for Extended Euclidean Algorithm](https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm)
 
 [More on modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic)
-
-
