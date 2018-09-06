@@ -146,6 +146,8 @@ a number that represents for example 4 characters, or 8, or 16, or so on,
 up unto the maximum integer that can be encrypted, which is 1 less than
 the lesser of $$p$$ and $$q$$.
 
+Please feel free to email me at {{ site.email }} with any questions or concerns!
+
 
 # Sources
 [Detailed rundown and proofs of correctness](https://sites.math.washington.edu/~morrow/336_09/papers/Yevgeny.pdf)
