@@ -145,17 +145,21 @@ int main(){
     GasolineSource *stationService = new GasStation();
     GasolineSource *canService = new FuelCan();
 
-    // racecar is dependent on fuel from a station
+    // racecar is independent from the implementation of the fuel service.
+    // a gas station service is injected.
     Car racecar(stationService);
     racecar.getGasoline();
 
-    // dune buggy is dependent on fuel from a can
+    // dune buggy is independent from the implementation of the fuel service.
+    // a fuel can service is injected.
     Car duneBuggy(canService);
     duneBuggy.getGasoline();
 
     return 0;
 }
 {% endhighlight %}
+
+A
 
 {% highlight bash %}
 $ ./main
