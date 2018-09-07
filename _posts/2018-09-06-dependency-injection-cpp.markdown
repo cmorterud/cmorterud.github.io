@@ -132,9 +132,6 @@ public:
         // Abstract away the dependency implementation with polymorphism.
         gasolineService->FuelUp();
     }
-    ~Car(){
-        delete gasolineService;
-    }
 };
 {% endhighlight %}
 
@@ -155,6 +152,7 @@ int main(){
     Car duneBuggy(canService);
     duneBuggy.getGasoline();
 
+    delete stationService;
     return 0;
 }
 {% endhighlight %}
