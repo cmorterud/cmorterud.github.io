@@ -159,7 +159,8 @@ int main(){
 }
 {% endhighlight %}
 
-A
+Here is the output from running main, showing that the appropriate services
+were called based up the dependencies injected.
 
 {% highlight bash %}
 $ ./main
@@ -168,3 +169,6 @@ Pumping gas at gas station
 Car needs more gasoline!
 Pumping gas from fuel can
 {% endhighlight %}
+
+Please feel free to email me with any additional questions or concerns at
+[{{ site.email }}](mailto:{{ site.email }}).
