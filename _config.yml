@@ -25,7 +25,7 @@ url: "https://codymorterud.github.io" # the base hostname & protocol for your si
 github_username:  CMorterud
 linkedin_username: cody-morterud-b7582a110
 
-
+google_analytics: UA-125434899-1
 # Build settings
 markdown: kramdown
 theme: minima
