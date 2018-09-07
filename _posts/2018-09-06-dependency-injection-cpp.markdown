@@ -117,7 +117,8 @@ public:
 class Car{
     GasolineSource *gasolineService = nullptr;
 public:
-    // The dependency for a source of gasoline is passed in,
+    // The dependency for a source of gasoline is passed in
+    // through constructor injection
     // as opposed to hard-coded into the class definition.
     Car(GasolineSource *service)
     : gasolineService(service) {
