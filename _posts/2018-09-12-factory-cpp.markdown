@@ -23,6 +23,8 @@ of a class out of a user's code to reduce dependencies.
 
 Let's talk about some code in a library. Let's say I had some classes.
 {% highlight cpp %}
+#include <iostream>
+
 class Animal{
 public:
     virtual void MakeNoise() = 0;
