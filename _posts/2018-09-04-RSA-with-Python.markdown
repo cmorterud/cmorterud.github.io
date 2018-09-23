@@ -137,7 +137,7 @@ It's important to keep in mind that $$M$$ must be coprime to $$n$$
 for a multiplicative modular inverse to exist (the inverse is the "encryption"
 of $$M$$).
 The factors of $$n$$ are $$p$$ and $$q$$, thus as long as $$M$$ is less than
-$$n$$ and not equal to $$p$$, $$M$$ can be encrypted.
+$$n$$ and not equal to $$p$$ or $$q$$, $$M$$ can be encrypted.
 
 {% highlight bash %}
 $ python3
@@ -154,7 +154,7 @@ $ python3
 >>> pow(225, 103, 779)
 5
 {% endhighlight %}
-Thus, we have successfully encrypted and decrypted an message.
+Thus, we have successfully encrypted and decrypted a message.
 
 The message of 5 isn't very useful, but for example, one could convert
 ASCII characters into integers, and then individually encrypt each character.
