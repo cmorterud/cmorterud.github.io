@@ -155,7 +155,25 @@ public string Select(IEnumerable<string> population,
 {% endhighlight %}
 
 # Crossover
-The two chromosomes from the Selection step should now 
+The two chromosomes from the Selection step should now
+be crossed over with some probability (~0.60).
+If a crossover occurs, the crossover will happen at a random
+position.
+
+For example, with two chromosomes `1110` and `1001` and
+randomly generated position 2, the chromosomes become
+`1010` and `1101`.
+
+{% highlight cs %}
+public IEnumerable<string> Crossover(string chromosome1,
+                                     string chromosome2)
+{
+    int randomPosition = random.Next(0, chromosome1.Length);
+    string newChromosome1 = chromosome1.Substring(randomPosition) + chromosome2.Substring(0, randomPosition);
+    string newChromosome2 = chromosome2.Substring(randomPosition) + chromosome1.Substring(0, randomPosition);
+    return new string[] { newChromosome1, newChromosome2 };
+}
+{% endhighlight %}
 
 
 # Mutation
