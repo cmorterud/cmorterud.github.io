@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Genetic Algorithm in C#"
-date:   2018-10-1 9:00:00 -0400
+date:   2018-10-1 10:00:00 -0400
 categories: development
+published: false
 ---
 <!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -17,7 +18,9 @@ For example, finding the value of a random bitstring given
 a fitness function to determine the similarity between a bitstring
 and the solution.
 
-In genetics terminology, a potential solution is referred to as a chromosome
+## Fitness
+
+In genetics terminology, a potential solution is referred to as a chromosome.
 
 To use a Genetic Algorithm, we need a fitness function which
 is passed a bitstring, and returns a score that represents the fitness
@@ -87,6 +90,82 @@ public class FitnessHelper{
     }
 }
 {% endhighlight %}
+
+The function Fitness returns a score in the range of (0, 1] indicating
+the relative fitness of the chromosome.
+
+## Algorithm
+
+There are four steps in running a Genetic Algorithm, namely
+Selection, Crossover, Mutation, and Repeated Iterations.
+
+# Selection
+Given some sample population, which in 
+our example is a population of bitstrings, we should select
+two bitstrings according to fitness proportionate selection, where
+a bitstring is more likely to be chosen if the fitness of that bitstring
+is higher.
+
+This means for our target bitstring of `0001`, `0010` is more likely
+to be selected in our Selection step than `1000`.
+
+Here is an example code that runs a Selection step.
+
+{% highlight cs %}
+public string Select(IEnumerable<string> population,
+                     IEnumerable<double> fitnesses,
+                     double sum = 0.0)
+{
+    // fitness proportionate selection.
+    var fitArr = fitnesses.ToArray();
+    if(sum == 0.0){
+        foreach(var fit in fitnesses){
+            sum += fit;
+        }
+    }
+    
+    // normalize.
+    for(int i = 0; i < fitArr.Length; ++i){
+        fitArr[i] /= sum;
+    }
+    
+    var popArr = population.ToArray();
+    
+    // sort fitness array along with population array.
+    Array.Sort(fitArr, popArr);
+    
+    sum = 0.0;
+    
+    // calculate accumulated normalized fitness values.
+    var accumFitness = new double[fitArr.Length];    
+    for(int i = 0; i < accumFitness.Length; ++i){
+        sum += fitArr[i];
+        accumFitness[i] = sum;
+    }
+    
+    var val = random.NextDouble();
+    
+    for(int i = 0; i < accumFitness.Length; ++i){
+        if(accumFitness[i] > val){
+            return popArr[i];
+        }
+    }
+    return "";
+}
+{% endhighlight %}
+
+# Crossover
+The two chromosomes from the Selection step should now 
+
+
+# Mutation
+
+# Repeated Iterations
+The above three steps should be applied repeatedly until
+a new population is generated, as opposed
+to the first iteration, where a sample population is randomly
+generated. This new population
+will become the population to select new chromosomes from.
 
 Please feel free to email me with any additional questions or concerns at
 [{{ site.email }}](mailto:{{ site.email }}).
