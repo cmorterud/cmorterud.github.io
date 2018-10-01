@@ -187,7 +187,9 @@ public IEnumerable<string> Crossover(string chromosome1,
 
 # Mutation
 
-The two chromosomes
+Randomness is also introduced through mutations,
+where each position of each chromosome has a chance to be modified,
+where in this example means a bit flip.
 
 {% highlight cs %}
 public string Mutate(string chromosome, double probability)
@@ -218,6 +220,80 @@ a new population is generated, as opposed
 to the first iteration, where a sample population is randomly
 generated. This new population
 will become the population to select new chromosomes from.
+
+The parameters of the function that actually runs the genetic algorithm
+are a function mapping bit-string to a fitness score,
+the length of the bit-strings being generated, the probability
+of a crossover, the probability of a mutation per position per bit-string,
+and the number of iterations to run.
+
+{% highlight cs %}
+public string Run(Func<string, double> fitness, int length, double p_c, double p_m, int iterations = 100)
+{   
+    int populationSize = 500;
+    // run population is population being generated.
+    // test population is the population from which samples are taken.
+    List<string> testPopulation = new List<string>(), runPopulation = new List<string>();
+    string one = "", two = "";
+    var randDouble = 0.0;
+    
+    // construct initial population.
+    while(testPopulation.Count < populationSize){
+        testPopulation.Add(Generate(length));
+    }
+
+    var fitnesses = new double[testPopulation.Count];
+    
+    double sum = 0.0;
+    
+    // continuously generate populations until number of iterations is met.
+    for(int iter = 0; iter < iterations; ++iter){
+        runPopulation = new List<string>();
+        
+        // calculate fitness for test population.
+        sum = 0.0;
+        fitnesses = new double[testPopulation.Count];
+        for(int i = 0; i < fitnesses.Length; ++i){
+            fitnesses[i] = fitness(testPopulation[i]);
+            sum += fitnesses[i];
+        }
+        
+        // a population doesn't need to be generated for last iteration.
+        // (using test population)
+        if(iter == iterations - 1) break;
+        
+        while(runPopulation.Count < testPopulation.Count){
+            
+            one = Select(testPopulation, fitnesses, sum);
+            two = Select(testPopulation, fitnesses, sum);
+
+            // determine if crossover occurs.
+            randDouble = random.NextDouble();
+            if(randDouble <= p_c){
+                var stringArr = Crossover(one, two).ToList();
+                one = stringArr[0];
+                two = stringArr[1];
+            }
+
+            one = Mutate(one, p_m);
+            two = Mutate(two, p_m);
+
+            runPopulation.Add(one);
+            runPopulation.Add(two);
+        }
+
+        testPopulation = runPopulation;
+    }
+    
+    // find best-fitting string.
+    var testSort = testPopulation.ToArray();
+    var fitSort = fitnesses.ToArray();
+    
+    Array.Sort(fitSort, testSort);
+    
+    return testSort[testSort.Length - 1];
+}
+{% endhighlight %}
 
 Please feel free to email me with any additional questions or concerns at
 [{{ site.email }}](mailto:{{ site.email }}).
