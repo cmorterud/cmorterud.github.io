@@ -9,12 +9,6 @@ categories: development
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
 Jekyll also offers powerful support for code snippets: -->
-<!--
-I have been a longtime macOS user since I started college, staying
-as far away from Windows as I could. That was mainly due to my college's use
-of Red Hat Enterprise Linux and macOS's command line utilities and Homebrew
-out of the box being
-a near approximation for RHEL's utilities.  -->
 
 Over the course of 3 years studying Computer Science, I have made
 heavy use of Bash and Git. Just last semester, I took a course called
