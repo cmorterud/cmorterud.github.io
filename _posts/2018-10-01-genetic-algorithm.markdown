@@ -221,6 +221,9 @@ to the first iteration, where a sample population is randomly
 generated. This new population
 will become the population to select new chromosomes from.
 
+A new population is generated many times to help eliminate random noise
+from the population.
+
 The parameters of the function that actually runs the genetic algorithm
 are a function mapping bit-string to a fitness score,
 the length of the bit-strings being generated, the probability
