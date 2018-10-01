@@ -28,7 +28,10 @@ public class FitnessHelper{
     // assumes chromosome and solution are bitstrings
     private string solution;
     public double Fitness(string chromosome){
+        int editDistance = Compute(chromosome, solution);
+        double score = 1.0 / (double) editDistance;
 
+        return score;
     }
 
     public FitnessHelper(string targetSolution){
@@ -56,8 +59,12 @@ public class FitnessHelper{
         }
 
         // Step 2
-        for (int i = 0; i <= n; d[i, 0] = i++){}
-        for (int j = 0; j <= m; d[0, j] = j++){}
+        for (int i = 0; i <= n; ++i){
+            d[i, 0] = i;
+        }
+        for (int j = 0; j <= m; ++j){
+            d[j, 0] = j;
+        }
 
         // Step 3
         for (int i = 1; i <= n; i++)
@@ -71,7 +78,8 @@ public class FitnessHelper{
                 // Step 6
                 d[i, j] = Math.Min(
                     Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1),
-                    d[i - 1, j - 1] + cost);
+                    d[i - 1, j - 1] + cost
+                );
             }
         }
         // Step 7
