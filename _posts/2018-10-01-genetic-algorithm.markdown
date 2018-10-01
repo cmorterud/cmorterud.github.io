@@ -313,7 +313,20 @@ because as additional randomness is introduced, additional iterations
 are needed to filter out the randomness to identify the most fit solution.
 
 ## Applications
+This example finds a randomly generated bitstring given a fitness function.
+That application may not be useful for most users, but problems
+can be adapted to use a Genetic Algorithm.
 
+For example, given a problem to identify which numbers
+in a given array sum to a certain value, a bitstring can represent
+the numbers included in a potential solution.
+
+Given the list `[1, 2, 3, 4]` and a sum of `8`, the bitstring
+`1011` represents a solution where first, third and fourth element
+of the array are summed which is a solution to the problem.
+
+Creating a function to represent the fitness of a bitstring is fundamental
+to using a Genetic Algorithm.
 
 ## Contact
 Please feel free to email me with any additional questions or concerns at
