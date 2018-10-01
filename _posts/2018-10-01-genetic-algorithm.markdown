@@ -225,9 +225,9 @@ A new population is generated many times to help eliminate random noise
 from the population.
 
 The parameters of the function that actually runs the genetic algorithm
-are a function mapping bit-string to a fitness score,
-the length of the bit-strings being generated, the probability
-of a crossover, the probability of a mutation per position per bit-string,
+are a function mapping bitstring to a fitness score,
+the length of the bitstrings being generated, the probability
+of a crossover, the probability of a mutation per position per bitstring,
 and the number of iterations to run.
 
 {% highlight cs %}
@@ -298,6 +298,24 @@ public string Run(Func<string, double> fitness, int length, double crossoverProb
 }
 {% endhighlight %}
 
+At the end, the best fitting bitstring from the last population
+is returned. 
+
+Increasing the amount of iterations helps to remove more and more noise
+from the populations, but also increases the runtime of the algorithm.
+A balance needs to be found between accuracy and runtime requirements.
+
+Increasing the population size increases the amount of randomness
+in the algorithm, which is needed to eventually ideally
+generate the best fitting bitstring. Population size and number
+of iterations should increase and decrease proportionally,
+because as additional randomness is introduced, additional iterations
+are needed to filter out the randomness to identify the most fit solution.
+
+## Applications
+
+
+## Contact
 Please feel free to email me with any additional questions or concerns at
 [{{ site.email }}](mailto:{{ site.email }}).
 
