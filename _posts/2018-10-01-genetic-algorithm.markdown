@@ -99,6 +99,15 @@ the relative fitness of the chromosome.
 There are four steps in running a Genetic Algorithm, namely
 Selection, Crossover, Mutation, and Repeated Iterations.
 
+The purpose of the Selection step is to generate chromosomes,
+with a preference towards chromosomes with a higher fitness score.
+
+The Crossover and Mutation steps introduce randomization
+to the generated chromosomes.
+
+Repeated Iterations eliminates the noise from the random steps (ideally!)
+to identify a solution with maximum fitness.
+
 # Selection
 Given some sample population, which in 
 our example is a population of bitstrings, we should select
@@ -177,6 +186,31 @@ public IEnumerable<string> Crossover(string chromosome1,
 
 
 # Mutation
+
+The two chromosomes
+
+{% highlight cs %}
+public string Mutate(string chromosome, double probability)
+{
+    string  ret = "";
+    double randomVariable = 0.0;
+    foreach(char c in chromosome){
+        randomVariable = random.NextDouble();
+        if(randomVariable < probability){
+            if(c == '1'){
+                ret += "0";
+            }
+            else{
+                ret += "1";
+            }
+        }
+        else{
+            ret += c;
+        }
+    }
+    return ret;
+}
+{% endhighlight %}
 
 # Repeated Iterations
 The above three steps should be applied repeatedly until
