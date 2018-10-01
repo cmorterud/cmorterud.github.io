@@ -228,7 +228,7 @@ of a crossover, the probability of a mutation per position per bit-string,
 and the number of iterations to run.
 
 {% highlight cs %}
-public string Run(Func<string, double> fitness, int length, double p_c, double p_m, int iterations = 100)
+public string Run(Func<string, double> fitness, int length, double crossoverProb, double mutationProb, int iterations = 100)
 {   
     int populationSize = 500;
     // run population is population being generated.
@@ -269,14 +269,14 @@ public string Run(Func<string, double> fitness, int length, double p_c, double p
 
             // determine if crossover occurs.
             randDouble = random.NextDouble();
-            if(randDouble <= p_c){
+            if(randDouble <= crossoverProb){
                 var stringArr = Crossover(one, two).ToList();
                 one = stringArr[0];
                 two = stringArr[1];
             }
 
-            one = Mutate(one, p_m);
-            two = Mutate(two, p_m);
+            one = Mutate(one, mutationProb);
+            two = Mutate(two, mutationProb);
 
             runPopulation.Add(one);
             runPopulation.Add(two);
@@ -297,3 +297,9 @@ public string Run(Func<string, double> fitness, int length, double p_c, double p
 
 Please feel free to email me with any additional questions or concerns at
 [{{ site.email }}](mailto:{{ site.email }}).
+
+## Sources
+
+[Genetic Algorithm Wiki](https://en.wikipedia.org/wiki/Genetic_algorithm)
+
+[Less technical article](https://towardsdatascience.com/introduction-to-genetic-algorithms-including-example-code-e396e98d8bf3)
