@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RSA Encryption and Decryption example by Python"
+title:  "RSA Encryption and Decryption Example by Python"
 date:   2018-09-04 21:00:00 -0400
 categories: development
 ---
