@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Genetic Algorithm in C#"
+title:  "Genetic Algorithm Example in C#"
 date:   2018-10-1 10:00:00 -0400
 categories: development
 published: yes
@@ -330,6 +330,9 @@ to using a Genetic Algorithm. One could write a function
 that, given a bitstring, calculates the sum, and returns the
 difference between the bitstring represented sum and the target sum,
 representing the fitness of the bitstring.
+
+## Full Implementation
+<script src="https://gist.github.com/cmorterud/0a77492852e0a5ecc4d80b361329656e.js"></script>
 
 ## Contact
 Please feel free to email me with any additional questions or concerns at
