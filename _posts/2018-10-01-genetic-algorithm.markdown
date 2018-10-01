@@ -3,7 +3,7 @@ layout: post
 title:  "Genetic Algorithm in C#"
 date:   2018-10-1 10:00:00 -0400
 categories: development
-published: false
+published: yes
 ---
 <!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
@@ -326,7 +326,10 @@ Given the list `[1, 2, 3, 4]` and a sum of `8`, the bitstring
 of the array are summed which is a solution to the problem.
 
 Creating a function to represent the fitness of a bitstring is fundamental
-to using a Genetic Algorithm.
+to using a Genetic Algorithm. One could write a function
+that, given a bitstring, calculates the sum, and returns the
+difference between the bitstring represented sum and the target sum,
+representing the fitness of the bitstring.
 
 ## Contact
 Please feel free to email me with any additional questions or concerns at
