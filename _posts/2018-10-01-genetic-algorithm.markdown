@@ -129,8 +129,6 @@ is higher.
 This means for our target bitstring of `0001`, `0010` is more likely
 to be selected in our Selection step than `1000`.
 
-Here is an example code that runs a Selection step.
-
 {% highlight cs %}
 public string Select(IEnumerable<string> population,
                      IEnumerable<double> fitnesses,
