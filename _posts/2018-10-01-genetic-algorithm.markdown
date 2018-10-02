@@ -449,7 +449,7 @@ namespace GeneticAlgorithm
             return new string[] { newChromosome1, newChromosome2 };
         }
 
-        public string Run(Func<string, double> fitness, int length, double p_c, double p_m, int iterations = 100)
+        public string Run(Func<string, double> fitness, int length, double crossoverProbability, double mutationProbability, int iterations = 100)
         {
             int populationSize = 500;
             // run population is population being generated.
@@ -494,15 +494,15 @@ namespace GeneticAlgorithm
 
                     // determine if crossover occurs.
                     randDouble = random.NextDouble();
-                    if (randDouble <= p_c)
+                    if (randDouble <= crossoverProbability)
                     {
                         var stringArr = Crossover(one, two).ToList();
                         one = stringArr[0];
                         two = stringArr[1];
                     }
 
-                    one = Mutate(one, p_m);
-                    two = Mutate(two, p_m);
+                    one = Mutate(one, mutationProbability);
+                    two = Mutate(two, mutationProbability);
 
                     runPopulation.Add(one);
                     runPopulation.Add(two);
