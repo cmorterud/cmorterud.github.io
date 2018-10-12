@@ -246,7 +246,8 @@ public string Run(Func<string, double> fitness, int length, double crossoverProb
     int populationSize = 500;
     // run population is population being generated.
     // test population is the population from which samples are taken.
-    List<string> testPopulation = new List<string>(), runPopulation = new List<string>();
+    List<string> testPopulation = new List<string>();
+    List<string> runPopulation = new List<string>();
     string one = "", two = "";
     var randDouble = 0.0;
     
