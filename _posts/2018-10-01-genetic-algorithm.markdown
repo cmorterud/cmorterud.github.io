@@ -240,7 +240,8 @@ of a crossover, the probability of a mutation per position per bitstring,
 and the number of iterations to run.
 
 {% highlight cs %}
-public string Run(Func<string, double> fitness, int length, double crossoverProb, double mutationProb, int iterations = 100)
+public string Run(Func<string, double> fitness, int length, double crossoverProb,
+                    double mutationProb, int iterations = 100)
 {   
     int populationSize = 500;
     // run population is population being generated.
