@@ -45,10 +45,10 @@ to ensure the generator $$g$$ cycles over the entire domain
 of $$\mathbb{Z}_p$$.
 
 This is finding $$k$$ in the following equation,
-$$a=b^k$$, where $$\mod p$$ is implied.
+$$a=b^k$$, where $$a$$ and $$b$$ are given, and $$\mod p$$ is implied.
 
 ## Diffie Hellman Key Exchange
-Let there be a public generator $$g=2$$ of some group $$G$$, with associated
+Let there be a public generator $$g=2$$ of some group $$G=\mathbb{Z}_{41}$$, with associated
 $$p=41$$.
 
 {% highlight python %}
@@ -58,7 +58,7 @@ $$p=41$$.
 >>> pow(g,a,p)
 23
 {% endhighlight %}
-Alice generates some secret value $$a=6$$, computes $$g^a=12$$,
+Alice generates some secret value $$a=6$$, computes $$g^a=23$$,
 and sends this to Bob. Notice because the discrete log problem
 is hard ($$a$$ and $$p$$ are sufficiently large to prevent a brute force attack),
 some eavesdropper is unable to find $$a$$ given $$g^a$$.
