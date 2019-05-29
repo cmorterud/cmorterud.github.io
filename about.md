@@ -7,10 +7,10 @@ permalink: /about/
 
 Cody Morterud is a Computer Science Engineering student at the
 University of Michigan, Ann Arbor. Currently, his favorite
-languages are C# and Python. He has previously worked at Quicken Loans
+languages is Java, close second is C#. He has previously worked at Quicken Loans
 in Detroit, Michigan, and The Boyle Lab in Ann Arbor, Michigan. 
 Cody is a VIM user, not Emacs.
-He is a young software developer with a love for 
+He is a young software engineer with a love for 
 new challenges and his friends.
 
 
