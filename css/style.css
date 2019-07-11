@@ -1,0 +1,57 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-height: 1.714em;
+}
+
+h1, h2, h3, h4, .site-title {
+	font-family: 'DM Serif Text', serif;
+}
+
+a {
+    color: #005457 !important;
+}
+
+.site-title {
+	font-size: 2.57em;
+	color: black !important;
+}
+
+.site-header {
+	border-top: solid 10px #005457;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+}
+
+.about p {
+	font-size: 1.5em;
+	color: #f1f1f1;
+
+	background: rgb(0,84,87);
+	background: linear-gradient(135deg, rgba(0,84,87,0.9037990196078431) 0%, rgba(0,98,114,0.9009978991596639) 100%);
+
+	padding: 1em 1.5em;
+}
+
+.post-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+}
+
+.post-list li {
+	margin: 1em;
+	padding: 1em 1.5em;
+	background-color: #f1f1f1;
+}
+
+.post-meta {
+	color: #424242;
+	font-size: ;
+}
+
+.post-link {
+	font-size: 1.5em;
+}
+
