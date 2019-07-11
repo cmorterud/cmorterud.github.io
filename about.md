@@ -3,13 +3,16 @@ layout: page
 title: About
 permalink: /about/
 ---
+{% avatar {{ site.github_username }} size=200 %}
 
 Cody Morterud is a Computer Science Engineering student at the
 University of Michigan, Ann Arbor. Currently, his favorite
-languages are C# and Python. He has previously worked at Quicken Loans
-in Detroit, Michigan, and The Boyle Lab in Ann Arbor, Michigan. He
-is a young software developer with a love for 
+language is Java, a close second is C#. He has previously worked at Quicken Loans
+in Detroit, Michigan, and The Boyle Lab in Ann Arbor, Michigan. 
+Cody is a VIM user, not Emacs.
+He is a young software engineer with a love for 
 new challenges and his friends.
+
 
 <!-- This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
