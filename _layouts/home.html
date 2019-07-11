@@ -3,6 +3,9 @@ layout: default
 ---
 
 <div class="home">
+  <div class="about">
+    <p>Cody Morterud is a Computer Science Engineering student at the University of Michigan, Ann Arbor. Currently, his favorite language is Java, a close second is C#. He has previously worked at Quicken Loans in Detroit, Michigan, and The Boyle Lab in Ann Arbor, Michigan. Cody is a VIM user, not Emacs. He is a young software engineer with a love for new challenges and his friends.</p>
+  </div>
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
@@ -21,9 +24,10 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if site.show_excerpts -%}
+        <!-- {%- if site.show_excerpts -%}
           {{ post.excerpt }}
-        {%- endif -%}
+        {%- endif -%} -->
+        {{ post.content | strip_html | truncatewords:35}}
       </li>
       {%- endfor -%}
     </ul>

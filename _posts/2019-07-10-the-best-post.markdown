@@ -3,7 +3,7 @@ layout: post
 title:  "This Is The Best Post On This Site"
 date:   2019-07-10 21:00:00 -0400
 categories: design
-published: false
+published: true
 ---
 
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
