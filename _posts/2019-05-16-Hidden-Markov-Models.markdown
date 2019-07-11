@@ -3,7 +3,7 @@ layout: post
 title:  "An Introduction to Hidden Markov Models"
 date:   2019-05-16 21:00:00 -0400
 categories: design
-published: false
+published: true
 ---
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -49,16 +49,16 @@ The events $$A$$, $$B$$, and $$C$$ are used to represent latent
 variables. The events $$a$$, $$b$$, and $$c$$ are used
 to represent observations.
 
-## Modelling
+## Modeling
 
 A HMM can be used to model a sequence of events with observations.
 A common situation is that someone goes to the doctor,
 and indicates their symptoms. The doctor either determines
 the patient is sick or healthy, based upon the reported symptoms.
 This someone goes to the doctor three separate occasions,
-and this is modelled by the below 1st order HMM.
+and this is modeled by the below 1st order HMM.
 
-![image](/assets/images/HMM-doctor.png "An image of a Hidden Markov Model, modelling a patient with a Doctor")
+![image](/assets/images/HMM-doctor.png "An image of a Hidden Markov Model, modeling a patient with a Doctor")
 
 The above 1st order HMM could be a model for a patient
 seeing a doctor on three separate occasions. On the first
@@ -114,6 +114,9 @@ if he or she is sick is 60%.
 
 With the probabilities defined, we can compute likelihoods
 for the model.
+
+## Likelihoods
+
 
 
 # Sources
