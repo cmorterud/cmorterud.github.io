@@ -4,7 +4,7 @@ body {
 	font-height: 1.714em;
 }
 
-h1, h2, h3, h4, .site-title {
+h1, h2, h3, h4, .page-link, .site-title {
 	font-family: 'DM Serif Text', serif;
 }
 
