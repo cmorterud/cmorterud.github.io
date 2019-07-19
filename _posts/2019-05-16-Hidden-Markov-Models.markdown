@@ -3,7 +3,7 @@ layout: post
 title:  "An Introduction to Hidden Markov Models"
 date:   2019-05-16 21:00:00 -0400
 categories: design
-published: true
+published: false
 ---
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
