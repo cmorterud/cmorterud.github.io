@@ -3,7 +3,6 @@ layout: post
 title:  "An Introduction to Hidden Markov Models"
 date:   2019-05-16 21:00:00 -0400
 categories: design
-published: false
 ---
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -116,7 +115,37 @@ With the probabilities defined, we can compute likelihoods
 for the model.
 
 ## Likelihoods
+The joint probability distribution for a 1st order HMM in general
+with states $$z_i$$ and observations $$x_j$$ is 
+$$P(x_1,...,x_T,z_1,...,z_t)=P(z_1)\prod_{t=1}^{T-1}P(z_{t+1}|z_t)\prod_{t=1}^TP(x_t|z_t)$$.
 
+The joint probability distribution for our model is 
+$$P(A,B,C,a,b,c)=P(A)P(a|A)P(B|A)P(b|B)P(C|B)P(c|C)$$.
 
+Given a sequence of observations, namely "Coughing", "Coughing", and "Smiling",
+we can identify the most likely sequence of states, by identifying
+the sequence of states that maximizes the joint probability distribution.
+A trivial approach is to enumerate all possible hidden states
+and then choose the hidden states with the highest likelihood.
+This is an $$O(|S|^T)$$ approach, where $$S$$ is a set containing
+all possible states.
+
+## Viterbi Algorithm
+The Viterbi Algorithm is a dynamic programming apprroach
+to identify the most likely sequence of hidden states
+of a first order HMM.
+Intuitively, the Viterbi Algorithm at each step $$i$$
+identifies the most likely sequence of the hidden states of length $$i$$.
+
+In the first step, the most likelihood hidden state for $$A$$
+is computed, namely "Healthy", since the probability
+that "Coughing" will be observed is higher if
+the hidden state is "Healthy" as opposed to "Sick".
+Namely, $$0.80\times0.25>0.20\times0.60$$.
+Intuitively, this means that it is more likely 
+(for this model) that a person was actually healthy,
+but happened to be coughing at their appointment.
+
+TODO: WIP
 
 # Sources
