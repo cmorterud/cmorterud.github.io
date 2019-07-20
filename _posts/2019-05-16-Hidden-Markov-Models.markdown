@@ -5,22 +5,19 @@ date:   2019-05-16 21:00:00 -0400
 categories: design
 ---
 <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-        }
-      });
-
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-
-  </script>
-
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
 <!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
@@ -74,7 +71,7 @@ For each hidden variable, Day One State, Day Two State, and Day Three State,
 the patient is either sick or healthy.
 For each observation, the patient is either coughing or smiling.
 
-Let's define the probabilitiy of Day One State.
+Let's define the probability of Day One State.
 
 | State | Likelihood |
 |---------|-------|
@@ -116,11 +113,13 @@ for the model.
 
 ## Likelihoods
 The joint probability distribution for a 1st order HMM in general
-with states $$z_i$$ and observations $$x_j$$ is 
-$$P(x_1,...,x_T,z_1,...,z_t)=P(z_1)\prod_{t=1}^{T-1}P(z_{t+1}|z_t)\prod_{t=1}^TP(x_t|z_t)$$.
+with states $$z_i$$ and observations $$x_j$$ is
+
+$$P(x_1,...,x_T,z_1,...,z_t)=P(z_1)\prod_{t=1}^{T-1}P(z_{t+1}|z_t)\prod_{t=1}^TP(x_t|z_t)$$
 
 The joint probability distribution for our model is 
-$$P(A,B,C,a,b,c)=P(A)P(a|A)P(B|A)P(b|B)P(C|B)P(c|C)$$.
+
+$$P(A,B,C,a,b,c)=P(A)P(a|A)P(B|A)P(b|B)P(C|B)P(c|C)$$
 
 Given a sequence of observations, namely "Coughing", "Coughing", and "Smiling",
 we can identify the most likely sequence of states, by identifying
@@ -131,13 +130,46 @@ This is an $$O(|S|^T)$$ approach, where $$S$$ is a set containing
 all possible states.
 
 ## Viterbi Algorithm
-The Viterbi Algorithm is a dynamic programming apprroach
+The Viterbi Algorithm is a dynamic programming approach
 to identify the most likely sequence of hidden states
 of a first order HMM.
 Intuitively, the Viterbi Algorithm at each step $$i$$
 identifies the most likely sequence of the hidden states of length $$i$$.
 
-In the first step, the most likelihood hidden state for $$A$$
+### Derivation
+Consider the joint probability distribution for a 1st order HMM,
+
+$$P(x_1,...,x_T,z_1,...,z_t)=P(z_1)\prod_{t=1}^{T-1}P(z_{t+1}|z_t)\prod_{t=1}^TP(x_t|z_t)$$
+
+We can simplify this by defining $$P(z_{1}|z_{0})=P(z_1)$$,
+substituting and rewriting bounds,
+
+$$P(x_1,...,x_T,z_1,...,z_t)=\prod_{t=1}^{T}P(z_{t}|z_{t-1})P(x_t|z_t)$$
+
+Let's define 
+
+$$r(z_1,...,z_k)=\prod_{t=1}^{T}P(z_{t}|z_{t-1})P(x_t|z_t)$$
+
+Consider function $$\Psi(k,v)$$. $$\Psi$$ represents the 
+probability that the hidden state sequence of $$k$$ observations ends
+in hidden state $$v$$.
+Let $$S(k,v)$$ be the set of all sequences of length $$k$$
+that end in $$v$$.
+
+In general,
+
+$$
+\begin{align}
+    \Psi(k,v)=&\max_{S(k,v)}\,r(z_1,...,z_k=v)\\
+    =&max_{z_1,...,z_{k-1},z_k=v}\prod_{t=1}^kP(z_{t}|z_{t-1})P(x_t|z_t)\\
+    =&max_{z_1,...,z_{k-1},z_k=v}P(v|z_{k-1})P(x_k|v)\prod_{t=1}^{k-1}P(z_{t}|z_{t-1})P(x_t|z_t)\\
+    =&max_{u\in H}\,\Psi(k-1,u)P(v|u)P(x_k|v)
+\end{align}
+$$
+
+### Application
+
+In the first step, the most likely hidden state for $$A$$
 is computed, namely "Healthy", since the probability
 that "Coughing" will be observed is higher if
 the hidden state is "Healthy" as opposed to "Sick".
@@ -146,6 +178,37 @@ Intuitively, this means that it is more likely
 (for this model) that a person was actually healthy,
 but happened to be coughing at their appointment.
 
-TODO: WIP
+In the second step, the most likely hidden state for $$B$$
+is computed. 
+The probability that the patient remains healthy at the second
+observation is $$0.80\times0.25\times0.90$$, which is the probability
+that the patient is healthy, coughing was observed, and was still healthy
+at the second observation. The probability that coughing was observed
+a second time for the above situation is
+$$0.80\times0.25\times0.90\times0.25$$.
+The probability that the patient becomes sick
+at the second observation is $$0.20\times0.60\times 0.10$$,
+which is the probability that the patient was healthy, emitted
+coughing at the first observation, and then became sick.
+The probability that coughing is observed a second time for this assignment of values
+is $$0.20\times0.60\times0.10\times0.60$$.
+
+Thus, because
+$$0.80\times0.25\times0.90\times0.25>0.20\times0.60\times0.10\times0.60$$,
+the most likely sequence of states for the first two days
+is "Healthy", and "Healthy".
+
+In the third step, $$0.80\times0.25\times0.90\times0.25\times0.90\times0.75$$,
+the probability that the patient remained healthy, and was smiling,
+is compared with $$0.80\times0.25\times0.90\times0.25\times0.10\times0.40$$.
+The patient remaining healthy has a higher probability than the patient
+became sick and was still smiling, thus the most likely sequence of
+hidden states is "Healthy", "Healthy", "Healthy".
 
 # Sources
+EECS 445 Lecture
+
+# Contact
+Please feel free to email me at
+[{{ site.email }}](mailto:{{ site.email }})
+with any questions or concerns. Thanks!
