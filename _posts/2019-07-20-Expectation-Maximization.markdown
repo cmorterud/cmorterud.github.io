@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "An Introduction to Expectation Maximization with a Binomial Distribution"
+title:  "An Introduction to Expectation Maximization with Binomial Distributions"
 date:   2019-07-20 21:00:00 -0400
 categories: design
 published: false
@@ -30,6 +30,25 @@ identifying the bias of an unfair coin.
 The graph shows the likelihood of $$f(p)={20\choose15}(p)^{15}(1-p)^5$$ for $$[0.0, 1.0]$$
 maximizing at 0.75. Thus, 0.75 maximizes the likelihood of the observations.
 This is an intuitive result, yet demonstrates the idea of likelihood maximization.
+
+A more direct approach to identifying the parameter that maximizes
+the likelihood function is through differentiation.
+
+
+$$
+\begin{align}
+f(p)=&{20\choose15}(p)^{15}(1-p)^5\\
+\frac{d}{dp}{20\choose15}(p)^{15}(1-p)^5=&15p^{14}(1-p)^5-5(1-p)^4p^{15}\\
+0=&p^{14}(1-p)^4(15(1-p)-5p)\\
+0=&p^{14}(1-p)^4(15-15p-5p)\\
+0=&p^{14}(1-p)^4(15-20p)
+\end{align}
+$$
+
+
+The solutions are 0, 1, and 0.75. A probability of 0 or 1 is non-sensical
+for a coin with a non-zero probability, so 0.75 represents
+where the likelihood is maximized.
 
 ## Modeling
 
