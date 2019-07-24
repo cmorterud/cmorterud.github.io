@@ -3,7 +3,7 @@ layout: post
 title:  "An Introduction to Expectation Maximization with Binomial Distributions"
 date:   2019-07-20 21:00:00 -0400
 categories: design
-published: false
+published: true
 ---
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
 <!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
@@ -73,7 +73,8 @@ $$z^{(i)}$$ is the coin used for the $$i$$th trial.
 Consider $$\theta$$, the parameter for each coin, namely
 the probability of a heads upon flip, which is a number on $$[0,1]$$.
 $$\theta_k$$ is the probability of heads associated with the $$k$$th coin.
-Let there be $$N$$ observations of heads or tails per trial.
+Let there be $$N$$ records of heads or tails per trial.
+Let there $$T$$ observations.
 
 Let's initialize the prior probability of a given observation to be assigned
 to a particular coin to be $$\frac{1}{2}$$, an equal chance of being
@@ -99,6 +100,19 @@ $$
 
 
 ## Maximization Step
+For the maximization step, the log-likelihood of the observations
+are maximized given the probability of the latent variables
+and observations, with respect to the parameters $$\theta$$.
+
+
+$$
+\begin{align}
+\log p(X,Z;\theta)=&\log \prod_{i=1}^T\,p(x^{(i)},z^{(i)};\theta)\\
+=&\sum_{i=1}^T\,\log\,p(x^{(i)},z^{(i)};\theta)
+\end{align}
+$$
+
+
 
 # Sources
 [N choose K code](https://stackoverflow.com/questions/4941753/is-there-a-math-ncr-function-in-python)
