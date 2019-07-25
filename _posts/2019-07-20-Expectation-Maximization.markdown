@@ -3,7 +3,7 @@ layout: post
 title:  "An Introduction to Expectation Maximization with Binomial Distributions"
 date:   2019-07-20 21:00:00 -0400
 categories: design
-published: true
+published: false
 ---
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
 <!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
@@ -73,8 +73,8 @@ $$z^{(i)}$$ is the coin used for the $$i$$th trial.
 Consider $$\theta$$, the parameter for each coin, namely
 the probability of a heads upon flip, which is a number on $$[0,1]$$.
 $$\theta_k$$ is the probability of heads associated with the $$k$$th coin.
-Let there be $$N$$ records of heads or tails per trial.
-Let there $$T$$ observations.
+Let there be $$N$$ records of heads or tails per observation.
+Let there $$T$$ observations. Thus, there are $$TN$$ coin flips.
 
 Let's initialize the prior probability of a given observation to be assigned
 to a particular coin to be $$\frac{1}{2}$$, an equal chance of being
@@ -82,6 +82,13 @@ labeled as "coin 1" or "coin 2". Namely $$z^{(i)}=\frac{1}{2}$$,
 because there are two coins.
 
 $$p(x^{(i)}|z^{(i)}=k;\theta)={N\choose x^{(i)}}\theta_k^{x^{(i)}}(1-\theta_k)^{N-x^{(i)}}$$
+
+$$
+\begin{align}
+p(X,Z;\theta)=&\prod_{i=1}^T\prod_{k\in\{1,2\}}p(z^{(i)}=k|x^{(i)};\theta)p(x^{(i)};\theta)\\
+\log\,p(X,Z;\theta)=&\sum_{i=1}^T\sum_{k\in\{1,2\}}\log\,(p(z^{(i)}=k|x^{(i)};\theta)p(x^{(i)};\theta))\\
+\end{align}
+$$
 
 ## Expectation Step
 For the expectation step, given the parameters and observations,
