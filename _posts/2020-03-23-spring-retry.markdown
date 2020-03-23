@@ -212,7 +212,7 @@ Failed to retrieve data!
 Failed to retrieve data!
 ```
 
-## Repo
+## [Repository](https://github.com/cmorterud/SpringRetryExample)
 
 ## Caveat
 Spring-level class proxying _*only*_ works if the `Retryable` method
