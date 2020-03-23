@@ -238,6 +238,6 @@ when `RetryableException` is thrown, no retries will occur!
 
 ## Thanks!
 You can find the working `maven` project at
-https://github.com/cmorterud/SpringRetryExample and
+[my repo](https://github.com/cmorterud/SpringRetryExample) and
 please feel free to email me with any questions or concerns. 
 Thanks for reading!
