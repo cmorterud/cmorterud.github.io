@@ -3,7 +3,6 @@ layout: post
 title:  "Spring Retry Template"
 date:   2019-03-22 21:00:00 -0400
 categories: design
-published: false
 ---
 
 # Introduction
