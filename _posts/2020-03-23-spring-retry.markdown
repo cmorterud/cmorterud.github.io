@@ -237,6 +237,8 @@ private String getActualBrittleResource() throws RetryableException {
 when `RetryableException` is thrown, no retries will occur!
 
 ## Thanks!
+I learned most of this through trial and error as well as
+[Baeldung's article](https://www.baeldung.com/spring-retry).
 You can find the working `maven` project at
 [my github repository](https://github.com/cmorterud/SpringRetryExample) and
 please feel free to email me with any questions or concerns. 
