@@ -138,7 +138,7 @@ In our Spring `@Configuration` class, we need to `@EnableRetry`
 so that the Spring-level class proxy provided
 by `spring-aspects` should handle retry logic.
 `@ComponentScan` is basic Spring configuration, more at 
-[https://www.baeldung.com/spring-component-scanning](Baeldung).
+[Baeldung](https://www.baeldung.com/spring-component-scanning).
 
 The `@Bean` is to override the definition for a `RetryTemplate` object
 that governs retry logic within the Spring-level class proxy.
