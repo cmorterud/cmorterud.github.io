@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spring Retry Template"
+title:  "Spring Retry Aspect Oriented Programming"
 date:   2019-03-22 21:00:00 -0400
 categories: design
 ---
