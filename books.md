@@ -18,7 +18,13 @@ In no particular order,
 
 ### Historical Fiction
 1. A Gentleman in Moscow - Amor Towles
-2. The Great Gatsby - obvious
+2. The Great Gatsby - F. Scott Fitzgerald
+
+### Fiction
+1. The Silent Patient - Alex Michaelides
+
+### Psychology
+1. Man's Search for Meaning - Viktor Frankl
 
 ### Business
 1. The Personal MBA: Master the Art of Business - Josh Kaufman
