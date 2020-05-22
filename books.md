@@ -19,12 +19,13 @@ In no particular order,
 ### Historical Fiction
 1. A Gentleman in Moscow - Amor Towles
 2. The Great Gatsby - F. Scott Fitzgerald
-
-### Fiction
-1. The Silent Patient - Alex Michaelides
+3. Blood Meridian - Cormac McCarthy
 
 ### Psychology
 1. Man's Search for Meaning - Viktor Frankl
+
+### Fiction
+1. The Silent Patient - Alex Michaelides
 
 ### Business
 1. The Personal MBA: Master the Art of Business - Josh Kaufman
