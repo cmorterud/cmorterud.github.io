@@ -13,8 +13,8 @@ In no particular order,
 2. A Random Walk Down Wall Street: The Time-Tested Strategy 
     for Successful Investing - Burton Malkiel
 
-### Programming
-1. C Programming Language - Brian Kernighan & Dennis Ritchie
+### Nonfiction
+1. Naked Economics - Charles Wheelan
 
 ### Historical Fiction
 1. A Gentleman in Moscow - Amor Towles
@@ -23,12 +23,17 @@ In no particular order,
 
 ### Psychology
 1. Man's Search for Meaning - Viktor Frankl
+2. Atomic Habits - James Clear
 
 ### Fiction
-1. The Silent Patient - Alex Michaelides
+1. Cloud Atlas - David Mitchell
+2. The Silent Patient - Alex Michaelides
 
 ### Business
 1. The Personal MBA: Master the Art of Business - Josh Kaufman
+
+### Programming
+1. C Programming Language - Brian Kernighan & Dennis Ritchie
 
 <!-- This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
