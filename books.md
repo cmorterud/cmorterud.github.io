@@ -12,6 +12,7 @@ In no particular order,
     & Michael Leboeuf
 2. A Random Walk Down Wall Street: The Time-Tested Strategy 
     for Successful Investing - Burton Malkiel
+3. Common Sense on Mutual Funds - John C. Bogle
 
 ### Nonfiction
 1. Naked Economics - Charles Wheelan
