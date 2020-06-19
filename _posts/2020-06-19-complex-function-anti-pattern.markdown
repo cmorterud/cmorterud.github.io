@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Complex Function Anti Pattern"
-date:   2019-06-20 21:00:00 -0400
+date:   2020-06-20 21:00:00 -0400
 categories: design
 ---
 
