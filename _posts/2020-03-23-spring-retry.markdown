@@ -51,7 +51,7 @@ all that is needed to have graceful retries.
 through proxying facilitated by `spring-aspects`.
 
 ### Service Level Implementation
-```
+```java
 @Service
 public class ReliableResource {
 
@@ -63,7 +63,7 @@ public class ReliableResource {
 The above is an example of your typical Spring `@Service` that retrieves
 some resource.
 
-```
+```java
 @Service
 public class BrittleResource {
 
@@ -93,7 +93,7 @@ back from a server. An example of a situation that should not be retried
 would be `400`, malformed request, or specific database `SQLException`,
 possibly a malformed query.
 
-```
+```java
 @Retryable(include = RetryableException.class)
 public String getBrittleResource() throws RetryableException{
     int result = new Random().nextInt() % 2;
@@ -112,7 +112,7 @@ achieved in our `@Configuration` class.
 
 
 ### Configuration
-```
+```java
 @Configuration
 @ComponentScan(basePackages = "com.cmorterud.examples.spring.retryTemplateExample")
 @EnableRetry
@@ -149,7 +149,7 @@ implementation for the brittle `@Service` dependency. The controller
 only needs to handle the exception thrown by the brittle service,
 and return the appropriate response to the client.
 
-```
+```java
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/resource")
@@ -185,7 +185,7 @@ public class ExampleController {
 
 ## Testing
 I wrote some tests using `MockMvc` that validate the retries occurring.
-```
+```java
 @SpringBootTest
 @AutoConfigureMockMvc
 class RetryTemplateExampleApplicationTests {
