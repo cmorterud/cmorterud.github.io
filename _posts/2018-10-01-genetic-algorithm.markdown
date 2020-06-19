@@ -25,7 +25,7 @@ To use a Genetic Algorithm, we need a fitness function which
 is passed a bitstring, and returns a score that represents the fitness
 of the bitstring.
 
-{% highlight cs %}
+```cs
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -100,7 +100,7 @@ namespace GeneticAlgorithm
         }
     }
 }
-{% endhighlight %}
+```
 
 The function Fitness returns a score in the range of (0, 1] indicating
 the relative fitness of the chromosome.
@@ -129,7 +129,7 @@ is higher.
 This means for our target bitstring of `0001`, `0010` is more likely
 to be selected in our Selection step than `1000`.
 
-{% highlight cs %}
+```cs
 public string Select(IEnumerable<string> population,
                      IEnumerable<double> fitnesses,
                      double sum = 0.0)
@@ -170,7 +170,7 @@ public string Select(IEnumerable<string> population,
     }
     return "";
 }
-{% endhighlight %}
+```
 
 # Crossover
 The two chromosomes from the Selection step should now
@@ -182,7 +182,7 @@ For example, with two chromosomes `1110` and `1001` and
 randomly generated position 2, the chromosomes become
 `1010` and `1101`.
 
-{% highlight cs %}
+```cs
 public IEnumerable<string> Crossover(string chromosome1,
                                      string chromosome2)
 {
@@ -191,7 +191,7 @@ public IEnumerable<string> Crossover(string chromosome1,
     string newChromosome2 = chromosome2.Substring(randomPosition) + chromosome1.Substring(0, randomPosition);
     return new string[] { newChromosome1, newChromosome2 };
 }
-{% endhighlight %}
+```
 
 
 # Mutation
@@ -200,7 +200,7 @@ Randomness is also introduced through mutations,
 where each position of each chromosome has a chance to be modified,
 where in this example means a bit flip.
 
-{% highlight cs %}
+```cs
 public string Mutate(string chromosome, double probability)
 {
     string  ret = "";
@@ -221,7 +221,7 @@ public string Mutate(string chromosome, double probability)
     }
     return ret;
 }
-{% endhighlight %}
+```
 
 # Repeated Iterations
 The above three steps should be applied repeatedly until
@@ -239,7 +239,7 @@ the length of the bitstrings being generated, the probability
 of a crossover, the probability of a mutation per position per bitstring,
 and the number of iterations to run.
 
-{% highlight cs %}
+```cs
 public string Run(Func<string, double> fitness, int length, double crossoverProb,
                     double mutationProb, int iterations = 100)
 {   
@@ -307,7 +307,7 @@ public string Run(Func<string, double> fitness, int length, double crossoverProb
     
     return testSort[testSort.Length - 1];
 }
-{% endhighlight %}
+```
 
 At the end, the best fitting bitstring from the last population
 is returned. 
@@ -343,7 +343,7 @@ difference between the bitstring represented sum and the target sum,
 representing the fitness of the bitstring.
 
 ## Full Implementation
-{% highlight cs %}
+```cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -523,7 +523,7 @@ namespace GeneticAlgorithm
         }
     }
 }
-{% endhighlight %}
+```
 
 ## Contact
 Please feel free to email me with any additional questions or concerns at
