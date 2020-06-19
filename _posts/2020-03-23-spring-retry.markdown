@@ -219,7 +219,7 @@ Spring-level class proxying _*only*_ works if the `Retryable` method
 is called from _*outside*_ the class. Meaning, if I had a definition
 of the brittle resource like this,
 
-```
+```java
 public String getBrittleResource() throws RetryableException {
     return getActualBrittleResource();
 }
