@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Single Responsibility Principle"
+title:  "Single Responsibility Principle for Functions"
 date:   2020-06-20 21:00:00 -0400
 categories: design
 ---
