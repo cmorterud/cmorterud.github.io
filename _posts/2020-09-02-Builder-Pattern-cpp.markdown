@@ -42,8 +42,11 @@ This class has several member variables. The specific constructor arguments
 may be a little obvious based upon the values placed, or if there are variables,
 even moreso obvious. This obviousness may be more lacking for a different class.
 We can make the parameters more obvious by introducing an inner static class.
-`static` because this inner class will not depend on any specific
-instances of `Automobile`.
+Note, nested classes in C++ are not tied to any specific instantiation
+of the enclosing class, thus they are static. 
+In Java, where I first learned this pattern,
+we would need to explicitly indicate that the nested `Builder`
+class should have a reference to any specific instantiation.
 
 ## Telescoping Constructor Anti-Pattern
 What if we wanted to make `airConditioned` optional? That would require
