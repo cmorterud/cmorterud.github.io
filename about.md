@@ -7,8 +7,9 @@ permalink: /about/
 
 Cody Morterud is a software engineer based in Chicago. He graduated
 from the University of Michigan's College of Engineering in 2019.
+He is currently attending Georgia Tech for a Master's of Computer Science.
 Currently, his favorite
-language is Java, a close second is C#. 
+language is Java, a close second is C++. 
 He currently works for Capital One
 and has previously worked at Quicken Loans
 in Detroit, Michigan, and The Boyle Lab in Ann Arbor, Michigan. 
