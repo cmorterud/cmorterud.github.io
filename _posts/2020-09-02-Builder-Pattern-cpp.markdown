@@ -162,8 +162,8 @@ public:
             return this;
         }
 
-        Builder self() {
-            return *this;
+        Automobile build() {
+            return Automobile(*this);
         }
     };
 
@@ -174,14 +174,12 @@ public:
 };
 
 int main() {
-    Automobile::Builder *builder = new Automobile::Builder();
-    Automobile automobile(builder->numberOfTires(4)
+    Automobile automobile = Automobile::Builder().numberOfTires(4)
         ->bodyType("coupe")
         ->engineType("V8")
         ->fuelTankSizeInGallons(16)
         ->airConditioned(true)
-        ->odometerMiles(20000)->self());
-    delete builder;
+        ->odometerMiles(20000)->build();
 }
 ```
 The parameters are clearly identified by the member functions of the builders,
