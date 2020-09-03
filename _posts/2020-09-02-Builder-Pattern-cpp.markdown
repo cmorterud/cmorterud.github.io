@@ -41,9 +41,9 @@ int main() {
 This class has several member variables. The specific constructor arguments
 may be a little obvious based upon the values placed, or if there are variables,
 even moreso obvious. This obviousness may be more lacking for a different class.
-We can make the parameters more obvious by introducing an inner static class,
-static because the builder class does not depend on specific instances
-of `Automobile`.
+We can make the parameters more obvious by introducing an inner static class.
+`static` because this inner class will not depend on any specific
+instances of `Automobile`.
 
 ## Telescoping Constructor Anti-Pattern
 What if we wanted to make `airConditioned` optional? That would require
@@ -185,7 +185,7 @@ int main() {
 }
 ```
 The parameters are clearly identified by the member functions of the builders,
-and optional parameters are easily implemented (simply remove the function call!);
+and optional parameters are easily implemented (simply remove the function call!).
 
 ## Thanks!
 Please feel free to email me at [{{ site.email }}](mailto:{{ site.email }})
