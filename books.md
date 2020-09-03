@@ -7,6 +7,9 @@ I have read all of these cover to cover.
 
 In no particular order,
 
+### Software Engineering
+1. Effective Java - Joshua Bloch
+
 ### Nonfiction
 1. Naked Economics - Charles Wheelan
 2. Man's Search for Meaning - Viktor Frankl
