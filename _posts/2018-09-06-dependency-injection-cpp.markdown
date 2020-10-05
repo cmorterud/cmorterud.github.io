@@ -24,7 +24,7 @@ Let's take a look at a class that requires a dependency and the class
 defining
 that dependency.
 
-{% highlight cpp %}
+```cpp
 #include <iostream>
 
 class GasolineSource{
@@ -49,14 +49,14 @@ public:
         gasolineService.FuelUp();
     }
 };
-{% endhighlight %}
+```
 
 Here, the class _Car_ is dependent on the definition for _GasStation_.
 _Car_ cannot be defined without _GasStation_ being defined and _Car_
 would need to be changed whenever the source of gasoline is changed,
 like to a _can_.
 
-{% highlight cpp %}
+```cpp
 #include <iostream>
 
 class GasolineSource{
@@ -81,11 +81,11 @@ public:
         gasolineService.FuelUp();
     }
 };
-{% endhighlight %}
+```
 
 The solution for this issue is Dependency Injection.
 
-{% highlight cpp %}
+```cpp
 #include <iostream>
 
 class GasolineSource{
@@ -127,11 +127,11 @@ public:
         gasolineService->FuelUp();
     }
 };
-{% endhighlight %}
+```
 
 Here is some code in main showing how the dependencies were injected.
 
-{% highlight cpp %}
+```cpp
 int main(){
     GasolineSource *stationService = new GasStation();
     GasolineSource *canService = new FuelCan();
@@ -147,9 +147,10 @@ int main(){
     duneBuggy.getGasoline();
 
     delete stationService;
+    delete canService;
     return 0;
 }
-{% endhighlight %}
+```
 
 Here is the output from running main, showing that the appropriate services
 were called based up the dependencies injected.
