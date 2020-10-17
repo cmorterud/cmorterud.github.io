@@ -9,6 +9,7 @@ In no particular order,
 
 ### Software Engineering
 1. Effective Java - Joshua Bloch
+2. The Phoenix Project - Gene Kim, Kevin Behr, and George Spafford
 
 ### Nonfiction
 1. Naked Economics - Charles Wheelan
