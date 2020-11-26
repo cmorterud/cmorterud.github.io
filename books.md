@@ -3,13 +3,14 @@ layout: page
 title: Book Recommendations
 permalink: /books/
 ---
-I have read all of these cover to cover. 
+I have read all of these cover to cover.
 
 In no particular order,
 
 ### Software Engineering
 1. Effective Java - Joshua Bloch
 2. The Phoenix Project - Gene Kim, Kevin Behr, and George Spafford
+3. The Unicorn Project - Gene Kim
 
 ### Nonfiction
 1. Naked Economics - Charles Wheelan
@@ -22,6 +23,7 @@ In no particular order,
     for Successful Investing - Burton Malkiel
 7. Common Sense on Mutual Funds - John C. Bogle
 8. Behave: The Biology of Humans at Our Best and Worst - Robert Sapolsky
+9. Your Complete Guide to Factor-Based Investing - Andrew L. Berkin, Larry E. Swedroe
 
 ### Fiction
 1. A Gentleman in Moscow - Amor Towles
