@@ -27,12 +27,12 @@ that dependency.
 ```cpp
 #include <iostream>
 
-class GasolineSource{
+class GasolineSource {
 public:
     void FuelUp() = 0;
 };
 
-class GasStation : public GasolineSource{
+class GasStation : public GasolineSource {
 public:
     void FuelUp(){
         std::cout << "Pumping gas at gas station" << std::endl;
@@ -40,11 +40,11 @@ public:
 };
 
 // Car is dependent on GasStation being defined in order to fuel up.
-class Car{
+class Car {
     GasStation gasolineService;
 public:
     Car(){ }
-    void getGasoline(){
+    void getGasoline() {
         std::cout << "Car needs more gasoline!" << std::endl;
         gasolineService.FuelUp();
     }
@@ -59,12 +59,12 @@ like to a _can_.
 ```cpp
 #include <iostream>
 
-class GasolineSource{
+class GasolineSource {
 public:
     void FuelUp() = 0;
 };
 
-class FuelCan : public GasolineSource{
+class FuelCan : public GasolineSource {
 public:
     void FuelUp(){
         std::cout << "Pumping gas from fuel can" << std::endl;
@@ -72,43 +72,44 @@ public:
 };
 
 // Car is dependent on FuelCan being defined in order to fuel up.
-class Car{
+class Car {
     FuelCan gasolineService;
 public:
     Car(){ }
-    void getGasoline(){
+    void getGasoline() {
         std::cout << "Car needs more gasoline!" << std::endl;
         gasolineService.FuelUp();
     }
 };
 ```
 
-The solution for this issue is Dependency Injection.
+The solution for this issue is Dependency Injection. We can inject the implementation for `GasolineSource` at
+runtime and use runtime polymorphism to abstract away the explicit implementation of `GasolineSource`.
 
 ```cpp
 #include <iostream>
 
-class GasolineSource{
+class GasolineSource {
 public:
     virtual void FuelUp() = 0;
     virtual ~GasolineSource() = default;
 };
 
-class GasStation : public GasolineSource{
+class GasStation : public GasolineSource {
 public:
-    virtual void FuelUp(){
+    virtual void FuelUp() {
         std::cout << "Pumping gas at gas station" << std::endl;
     }
 };
 
-class FuelCan : public GasolineSource{
+class FuelCan : public GasolineSource {
 public:
-    virtual void FuelUp(){
+    virtual void FuelUp() {
         std::cout << "Pumping gas from fuel can" << std::endl;
     }
 };
 
-class Car{
+class Car {
     GasolineSource *gasolineService = nullptr;
 public:
     // The dependency for a source of gasoline is passed in
@@ -121,7 +122,7 @@ public:
             throw std::invalid_argument("service must not be null");
         }
     }
-    void getGasoline(){
+    void getGasoline() {
         std::cout << "Car needs more gasoline!" << std::endl;
         // Abstract away the dependency implementation with polymorphism.
         gasolineService->FuelUp();
@@ -132,7 +133,7 @@ public:
 Here is some code in main showing how the dependencies were injected.
 
 ```cpp
-int main(){
+int main() {
     GasolineSource *stationService = new GasStation();
     GasolineSource *canService = new FuelCan();
 
