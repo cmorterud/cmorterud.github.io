@@ -11,6 +11,7 @@ In no particular order,
 1. Effective Java - Joshua Bloch
 2. The Phoenix Project - Gene Kim, Kevin Behr, and George Spafford
 3. The Unicorn Project - Gene Kim
+4. The DevOps Handbook - Gene Kim, Patrick Debois, Jez Humble, John Willis
 
 ### Nonfiction
 1. Naked Economics - Charles Wheelan
