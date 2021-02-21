@@ -5,16 +5,11 @@ permalink: /about/
 ---
 {% avatar {{ site.github_username }} size=200 %}
 
-Cody Morterud is a software engineer based in Chicago. He graduated
-from the University of Michigan's College of Engineering in 2019.
-He is currently attending Georgia Tech for a Master's of Computer Science.
-Currently, his favorite
-language is Java, a close second is C++. 
-He currently works for Capital One
-and has previously worked at Quicken Loans
-in Detroit, Michigan, and The Boyle Lab in Ann Arbor, Michigan. 
-He is a young software engineer with a love for 
-new challenges and his friends.
+Cody Morterud is a software engineer based in Chicago. 
+He is a recent graduate of the College of Engineering at the University of Michigan in 2019,
+and is pursuing his Master's of Computer Science at Georgia Tech.
+Currently, Cody is a software engineer at Capital One 
+with previous experience at Quicken Loans and the Boyle Lab in Ann Arbor.
 
 
 <!-- This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
