@@ -17,8 +17,7 @@ author: Cody Morterud
 title: A Dependency Injected
 email: me@codymorterud.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Cody Morterud's life, career, software development, and whatever
-  else comes to mind blog.
+  Cody Morterud's software development blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://codymorterud.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  CMorterud
