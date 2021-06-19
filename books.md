@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Book Recommendations
 permalink: /books/
 ---
 I have read all of these cover to cover.
