@@ -7,7 +7,7 @@ permalink: /about/
 
 Cody Morterud is a software engineer based in Michigan. 
 He is a recent graduate of the College of Engineering at the University of Michigan in 2019,
-and is pursuing his Master's of Computer Science at Georgia Tech.
+and graduated from Georgia Tech with a Master's of Computer Science in 2023.
 Currently, Cody is a software engineer at Microsoft 
 with previous experience at Capital One, Quicken Loans, and the Boyle Lab in Ann Arbor.
 
