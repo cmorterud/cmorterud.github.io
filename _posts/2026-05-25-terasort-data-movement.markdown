@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "TeraSort and the Cost of Moving Data"
-date:   2026-05-23 10:45:00 -0400
+date:   2026-05-25 09:00:00 -0400
 categories: systems
 ---
 

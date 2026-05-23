@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Distance Vector Routing and Distributed State"
-date:   2026-05-23 10:00:00 -0400
+date:   2026-05-21 09:00:00 -0400
 categories: systems
 ---
 

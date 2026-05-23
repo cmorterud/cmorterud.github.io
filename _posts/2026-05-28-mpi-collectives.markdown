@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MPI Collectives Are Communication Schedules"
-date:   2026-05-23 11:00:00 -0400
+date:   2026-05-28 09:00:00 -0400
 categories: systems
 ---
 

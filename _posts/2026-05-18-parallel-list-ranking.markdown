@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Parallel List Ranking with OpenMP and CUDA"
-date:   2026-05-22 21:30:00 -0400
+date:   2026-05-18 09:00:00 -0400
 categories: systems
 ---
 
