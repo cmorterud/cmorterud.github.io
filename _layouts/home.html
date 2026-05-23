@@ -3,11 +3,97 @@ layout: default
 ---
 
 <div class="home">
-  <div class="about">
-    <p>
-      Cody Morterud is a software engineer.
+  <section class="hero" aria-labelledby="intro-heading">
+    <p class="eyebrow">Backend software engineer</p>
+    <h1 id="intro-heading">I build reliable services and explain the engineering behind them.</h1>
+    <p class="hero-summary">
+      I am Cody Morterud, a senior software engineer based in Michigan. My work centers on backend
+      systems, distributed workflows, cloud services, storage reliability, and codebases that remain
+      understandable as they grow.
     </p>
-  </div>
+    <div class="hero-actions" aria-label="Primary links">
+      <a href="{{ "/about/" | relative_url }}">About</a>
+      <a href="https://github.com/{{ site.github_username | strip }}">GitHub</a>
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">LinkedIn</a>
+    </div>
+  </section>
+
+  <section class="focus-areas" aria-labelledby="focus-heading">
+    <h2 id="focus-heading">Engineering Focus</h2>
+    <div class="focus-grid">
+      <article>
+        <h3>Backend Systems</h3>
+        <p>Building .NET Service Fabric and gRPC systems, Java Spring Boot REST APIs, AWS ECS and Lambda services, and storage infrastructure.</p>
+      </article>
+      <article>
+        <h3>Distributed Reliability</h3>
+        <p>Owning on-call systems, tracing failures across service boundaries, preserving state consistency, and reducing noisy alerts.</p>
+      </article>
+      <article>
+        <h3>Engineering Leverage</h3>
+        <p>Improving test suites, CI pipelines, diagnostics, automation, and design documentation so teams can move with confidence.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="experience-highlights" aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Recent Work</h2>
+    <div class="highlight-list">
+      <article>
+        <p class="highlight-role">Microsoft - Senior Software Engineer</p>
+        <h3>OneDrive and SharePoint storage reliability</h3>
+        <p>Designed .NET async producer-consumer upload frameworks, fixed thread-local async state bugs, reduced test runtime by 75%, and served as on-call.</p>
+      </article>
+      <article>
+        <p class="highlight-role">Microsoft - Software Engineer II</p>
+        <h3>Stateful services for AI infrastructure</h3>
+        <p>Owned Service Fabric and gRPC microservices for lab provisioning, machine allocation, workflow orchestration, transactions, and recoverable distributed workflows.</p>
+      </article>
+      <article>
+        <p class="highlight-role">Capital One - Software Engineer</p>
+        <h3>AWS microservices and API performance</h3>
+        <p>Owned Java Spring Boot REST services on ECS, ran zero-downtime releases, improved latency by 20%, and migrated an EC2 application to Lambda.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="technical-breadth" aria-labelledby="breadth-heading">
+    <h2 id="breadth-heading">Technical Breadth</h2>
+    <p class="section-intro">
+      Beyond production backend work, I have studied and built across lower-level systems,
+      networking, security, compilers, machine learning, and high-performance computing.
+    </p>
+    <div class="breadth-grid">
+      <article>
+        <h3>Operating Systems</h3>
+        <p>User-level thread scheduling, context switching, mutexes, condition variables, virtual memory, copy-on-write, page tables, swap, and page replacement.</p>
+      </article>
+      <article>
+        <h3>Networking</h3>
+        <p>Distance-vector routing, BGP and SDN simulations, Mininet topologies, autonomous systems, router namespaces, and protocol failure scenarios.</p>
+      </article>
+      <article>
+        <h3>Security & Cryptography</h3>
+        <p>AES, PBKDF2, HMAC verification, elliptic-curve arithmetic, modular inverses, point compression, and applied security exercises.</p>
+      </article>
+      <article>
+        <h3>Compilers & Analysis</h3>
+        <p>LLVM passes, reaching-definition analysis, liveness analysis, fuzzing, delta debugging, datalog, and statistical debugging.</p>
+      </article>
+      <article>
+        <h3>Machine Learning</h3>
+        <p>Q-learning, decision trees, bagged random trees, trading strategy evaluation, market simulation, CNNs, autoencoders, and data visualization.</p>
+      </article>
+      <article>
+        <h3>Parallel Computing</h3>
+        <p>MPI-style collectives, CUDA list ranking, Chapel terasort, memory allocation, performance scripts, and cluster-oriented workflows.</p>
+      </article>
+      <article>
+        <h3>Web Systems</h3>
+        <p>Flask and SQLite applications, REST-style APIs, React frontends, static deployment, search-oriented service pages, and a basic HTTP server.</p>
+      </article>
+    </div>
+  </section>
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
@@ -15,7 +101,10 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title | default: "Writing" }}</h2>
+    <p class="section-intro">
+      Writings on software engineering, algorithms, security, distributed-system resilience, and software design.
+    </p>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
