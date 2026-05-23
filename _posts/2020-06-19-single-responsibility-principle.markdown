@@ -146,6 +146,6 @@ eliminating a level of nesting.
 
 
 ## Thanks!
-Please feel free to email me at [{{ site.email }}](mailto:{{ site.email }})
-with any questions or concerns. 
+Please feel free to message me on [LinkedIn]({{ site.linkedin_url }})
+with any questions or concerns.
 Thanks for reading!

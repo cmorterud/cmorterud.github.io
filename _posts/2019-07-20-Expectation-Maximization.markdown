@@ -126,6 +126,5 @@ $$
 [N choose K code](https://stackoverflow.com/questions/4941753/is-there-a-math-ncr-function-in-python)
 
 # Contact
-Please feel free to email me at
-[{{ site.email }}](mailto:{{ site.email }})
+Please feel free to message me on [LinkedIn]({{ site.linkedin_url }})
 with any questions or concerns. Thanks!

@@ -526,8 +526,8 @@ namespace GeneticAlgorithm
 ```
 
 ## Contact
-Please feel free to email me with any additional questions or concerns at
-[{{ site.email }}](mailto:{{ site.email }}).
+Please feel free to message me on [LinkedIn]({{ site.linkedin_url }})
+with any additional questions or concerns.
 
 ## Sources
 

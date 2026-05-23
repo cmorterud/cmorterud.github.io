@@ -157,7 +157,7 @@ a number that represents for example 4 characters, or 8, or 16, or so on,
 up unto the maximum integer that can be encrypted, which is 1 less than
 the lesser of $$p$$ and $$q$$.
 
-Please feel free to email me at [{{ site.email }}](mailto:{{ site.email }}) with any questions or concerns!
+Please feel free to message me on [LinkedIn]({{ site.linkedin_url }}) with any questions or concerns!
 
 
 # Sources

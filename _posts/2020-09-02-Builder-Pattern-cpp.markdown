@@ -189,6 +189,6 @@ The parameters are clearly identified by the member functions of the builders,
 and optional parameters are easily implemented (simply remove the function call!).
 
 ## Thanks!
-Please feel free to email me at [{{ site.email }}](mailto:{{ site.email }})
-with any questions or concerns. 
+Please feel free to message me on [LinkedIn]({{ site.linkedin_url }})
+with any questions or concerns.
 Thanks for reading!

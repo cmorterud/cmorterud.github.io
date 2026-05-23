@@ -182,5 +182,5 @@ That is the part that applies to backend services. Make the state of work
 explicit, know what can wake it, and be careful about transitions that change
 ownership.
 
-Please feel free to email me at [{{ site.email }}](mailto:{{ site.email }})
+Please feel free to message me on [LinkedIn]({{ site.linkedin_url }})
 with any questions or concerns.

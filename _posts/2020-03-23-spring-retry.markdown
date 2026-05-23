@@ -241,5 +241,5 @@ I learned most of this through trial and error as well as
 [Baeldung's article](https://www.baeldung.com/spring-retry).
 You can find the working `maven` project at
 [my github repository](https://github.com/cmorterud/SpringRetryExample) and
-please feel free to email me with any questions or concerns. 
+please feel free to message me on [LinkedIn]({{ site.linkedin_url }}) with any questions or concerns.
 Thanks for reading!

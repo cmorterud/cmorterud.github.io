@@ -209,6 +209,5 @@ hidden states is "Healthy", "Healthy", "Healthy".
 EECS 445 Lecture
 
 # Contact
-Please feel free to email me at
-[{{ site.email }}](mailto:{{ site.email }})
+Please feel free to message me on [LinkedIn]({{ site.linkedin_url }})
 with any questions or concerns. Thanks!

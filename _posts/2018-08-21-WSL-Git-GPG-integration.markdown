@@ -230,6 +230,5 @@ and
 [GnuPG User Manual](https://www.gnupg.org/gph/en/manual/c14.html)
 
 
-Thanks for reading! Please let me know if there are any questions
-or comments
-at [{{ site.email }}](mailto:{{ site.email }}).
+Thanks for reading! Please message me on [LinkedIn]({{ site.linkedin_url }})
+if there are any questions or comments.

@@ -96,5 +96,5 @@ would not require a code change on the client side, because
 the responsibility for instantiation is on `AnimalFactory`, which
 is part of the library code.
 
-Please feel free to email me with any additional questions or concerns at
-[{{ site.email }}](mailto:{{ site.email }}).
+Please feel free to message me on [LinkedIn]({{ site.linkedin_url }})
+with any additional questions or concerns.
