@@ -10,9 +10,8 @@ TeraSort is a sorting benchmark. At small scale, the interesting part is the
 comparison function. At cluster scale, the interesting part is data movement.
 
 The project I worked on used Chapel to sort TeraSort-style records across
-multiple locales. Each record had a 10-byte key and an 88-byte value. The goal
-was to produce one globally sorted output, even though the input was spread
-across machines.
+multiple locales. The goal was to produce one globally sorted output, even
+though the input was spread across machines.
 
 This is a useful systems problem because local correctness is not enough.
 
@@ -41,21 +40,9 @@ Chapel exposes distributed execution through locales. A locale is a place
 where computation and memory live. The project used Chapel locales for the
 sort itself, while the provided generator and validator used MPI.
 
-The basic shape of the code was:
-
-```chpl
-coforall loc in Locales {
-    on loc do {
-        kv_qsort(keys, values,
-                 keys.localSubdomain().dim(0).first,
-                 keys.localSubdomain().dim(0).last);
-    }
-}
-```
-
-That runs one task per locale and sorts the records local to that locale.
-This is only the first step. It makes each local range easier to reason about,
-but it does not decide the final owner of each record.
+The first step was local work: each locale sorted the records it already had.
+That made each local range easier to reason about, but it did not decide the
+final owner of each record.
 
 ## Sampling And Splitters
 The implementation used sampling to estimate good partition boundaries.
@@ -83,11 +70,10 @@ sort back into a bottleneck.
 Once the splitters were known, each record was assigned a destination locale.
 This is where the project became more about systems than sorting.
 
-The implementation tracked how many records belonged to each destination and
-where those ranges started and ended. Sorting locally first helped here.
-Records destined for the same splitter range appeared in contiguous chunks,
-so the code could move ranges instead of treating the data as unrelated
-individual records.
+The implementation then had to move records to the locale responsible for
+their key range. Sorting locally first helped because records for the same
+destination tended to be grouped by key range rather than appearing as a
+completely arbitrary stream.
 
 That is the practical lesson. Distributed algorithms often spend their time
 not on the core operation, but on arranging the data so the core operation is
@@ -119,9 +105,8 @@ Validation was an important part of the assignment. It is easy to write a
 distributed sort that looks plausible on small input and fails when data is
 skewed.
 
-The project wrote output counts per locale along with the sorted key/value
-records. The validator could then check that the output contained the right
-number of records and that the global ordering was correct.
+The validator checked that the output contained the right number of records
+and that the global ordering was correct.
 
 The count check matters. A distributed sort can produce sorted output and
 still be wrong if it drops or duplicates records while moving data.

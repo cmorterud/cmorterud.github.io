@@ -52,7 +52,7 @@ That is the local Bellman-Ford update.
 ## Messages
 In the simulator, nodes did not inspect the full topology. This was not a
 Mininet project. It used a Python topology simulator where nodes exchanged
-messages through the provided `Topology` and `Node` classes.
+messages with their neighbors.
 
 A node processed messages from neighbors and updated its own state.
 
@@ -122,8 +122,8 @@ forced the implementation to handle routes whose cost can keep decreasing.
 Without a boundary, a negative cycle can keep improving forever from the
 point of view of the local update rule.
 
-The implementation handled that by saturating very low costs at `-99`, which
-effectively acted as negative infinity for the simulator.
+The implementation handled that by bounding very low costs, which effectively
+acted as negative infinity for the simulator.
 
 ## Distributed State
 The useful backend analogy is distributed state.
