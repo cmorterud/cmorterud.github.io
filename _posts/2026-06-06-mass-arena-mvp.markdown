@@ -1,10 +1,9 @@
 ---
-
 layout: post
 title:  "Building Mass Arena"
 date:   2026-06-06 09:00:00 -0400
 categories: projects web systems
---------------------------------
+---
 
 # Introduction
 
