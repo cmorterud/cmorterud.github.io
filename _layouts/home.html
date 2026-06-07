@@ -5,11 +5,11 @@ layout: default
 <div class="home">
   <section class="hero" aria-labelledby="intro-heading">
     <p class="eyebrow">Backend software engineer</p>
-    <h1 id="intro-heading">I build reliable services and explain the engineering behind them.</h1>
+    <h1 id="intro-heading">Backend systems, reliability, and technical writing.</h1>
     <p class="hero-summary">
-      I am Cody Morterud, a senior software engineer based in Michigan. My work centers on backend
-      systems, distributed workflows, cloud services, storage reliability, and codebases that remain
-      understandable as they grow.
+      Cody Morterud is a senior software engineer based in Michigan. This site collects notes and
+      project writeups on backend services, distributed workflows, cloud infrastructure, storage
+      reliability, and software design.
     </p>
     <div class="hero-actions" aria-label="Primary links">
       <a href="{{ "/about/" | relative_url }}">About</a>
@@ -23,23 +23,23 @@ layout: default
     <div class="focus-grid">
       <article>
         <h3>Backend Systems</h3>
-        <p>Building .NET Service Fabric and gRPC systems, Java Spring Boot REST APIs, AWS services, storage infrastructure, and deployed TypeScript services.</p>
+        <p>.NET Service Fabric and gRPC systems, Java Spring Boot REST APIs, AWS services, storage infrastructure, and deployed TypeScript services.</p>
       </article>
       <article>
         <h3>Distributed Reliability</h3>
-        <p>Owning on-call systems, tracing failures across service boundaries, preserving state consistency, and reducing noisy alerts.</p>
+        <p>On-call ownership, service-boundary failure analysis, state consistency, production diagnostics, and alert quality.</p>
       </article>
       <article>
         <h3>Real-Time Product Systems</h3>
-        <p>Designing server-authoritative WebSocket applications where clients send intent, servers own truth, and live state stays off the database critical path.</p>
+        <p>Server-authoritative WebSocket applications, in-memory live state, durable product data, and small real-time protocols.</p>
       </article>
       <article>
         <h3>Pragmatic Cloud Deployment</h3>
-        <p>Shipping small but real systems with Docker Compose, Caddy, HTTPS, Azure VMs, private PostgreSQL, deploy scripts, migrations, and smoke tests.</p>
+        <p>Docker Compose, Caddy, HTTPS, Azure VMs, private PostgreSQL, deploy scripts, migrations, and smoke tests.</p>
       </article>
       <article>
         <h3>Engineering Leverage</h3>
-        <p>Improving test suites, CI pipelines, diagnostics, automation, queued persistence, analytics, and design documentation so teams can move with confidence.</p>
+        <p>Test suites, CI pipelines, diagnostics, automation, queued persistence, analytics, and design documentation.</p>
       </article>
     </div>
   </section>
@@ -47,8 +47,7 @@ layout: default
   <section class="technical-breadth" aria-labelledby="breadth-heading">
     <h2 id="breadth-heading">Technical Breadth</h2>
     <p class="section-intro">
-      Beyond production backend work, I have studied and built across lower-level systems,
-      networking, security, compilers, machine learning, and high-performance computing.
+      Selected areas from professional work, graduate study, and independent projects.
     </p>
     <div class="breadth-grid">
       <article>
@@ -90,7 +89,7 @@ layout: default
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Writing" }}</h2>
     <p class="section-intro">
-      Writings on software engineering, algorithms, security, distributed-system resilience, and software design.
+      Notes on software engineering, algorithms, security, distributed-system behavior, and software design.
     </p>
     <ul class="post-list">
       {%- for post in site.posts -%}
