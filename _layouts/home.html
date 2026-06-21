@@ -4,93 +4,21 @@ layout: default
 
 <div class="home">
   <section class="hero" aria-labelledby="intro-heading">
-    <p class="eyebrow">Backend software engineer</p>
-    <h1 id="intro-heading">Backend systems, reliability, and technical writing.</h1>
+    <p class="eyebrow">Software engineering notes</p>
+    <h1 id="intro-heading">Cody Morterud</h1>
     <p class="hero-summary">
-      Cody Morterud is a senior software engineer based in Michigan. This site collects notes and
-      project writeups on backend services, distributed workflows, cloud infrastructure, storage
-      reliability, and software design.
+      Notes and project writeups on backend systems, networking, distributed systems, and software design.
     </p>
-    <div class="hero-actions" aria-label="Primary links">
-      <a href="{{ "/about/" | relative_url }}">About</a>
+    <div class="hero-actions" aria-label="Profile links">
       <a href="https://github.com/{{ site.github_username | strip }}">GitHub</a>
       <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">LinkedIn</a>
     </div>
   </section>
 
-  <section class="focus-areas" aria-labelledby="focus-heading">
-    <h2 id="focus-heading">Engineering Focus</h2>
-    <div class="focus-grid">
-      <article>
-        <h3>Backend Systems</h3>
-        <p>.NET Service Fabric and gRPC systems, Java Spring Boot REST APIs, AWS services, storage infrastructure, and deployed TypeScript services.</p>
-      </article>
-      <article>
-        <h3>Distributed Reliability</h3>
-        <p>On-call ownership, service-boundary failure analysis, state consistency, production diagnostics, and alert quality.</p>
-      </article>
-      <article>
-        <h3>Real-Time Product Systems</h3>
-        <p>Server-authoritative WebSocket applications, in-memory live state, durable product data, and small real-time protocols.</p>
-      </article>
-      <article>
-        <h3>Pragmatic Cloud Deployment</h3>
-        <p>Docker Compose, Caddy, HTTPS, Azure VMs, private by default subnets, deploy scripts, migrations, and smoke tests.</p>
-      </article>
-      <article>
-        <h3>Engineering Leverage</h3>
-        <p>Test suites, CI pipelines, diagnostics, automation, queued persistence, analytics, and design documentation.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="technical-breadth" aria-labelledby="breadth-heading">
-    <h2 id="breadth-heading">Technical Breadth</h2>
-    <p class="section-intro">
-      Selected areas from professional work, graduate study, and independent projects.
-    </p>
-    <div class="breadth-grid">
-      <article>
-        <h3>Operating Systems</h3>
-        <p>User-level thread scheduling, context switching, mutexes, condition variables, virtual memory, copy-on-write, page tables, swap, and page replacement.</p>
-      </article>
-      <article>
-        <h3>Networking</h3>
-        <p>Distance-vector routing, BGP and SDN simulations, Mininet topologies, autonomous systems, router namespaces, and protocol failure scenarios.</p>
-      </article>
-      <article>
-        <h3>Security & Cryptography</h3>
-        <p>AES, PBKDF2, HMAC verification, elliptic-curve arithmetic, modular inverses, point compression, and applied security exercises.</p>
-      </article>
-      <article>
-        <h3>Compilers & Analysis</h3>
-        <p>LLVM passes, reaching-definition analysis, liveness analysis, fuzzing, delta debugging, datalog, and statistical debugging.</p>
-      </article>
-      <article>
-        <h3>Machine Learning</h3>
-        <p>Q-learning, decision trees, bagged random trees, trading strategy evaluation, market simulation, CNNs, autoencoders, and data visualization.</p>
-      </article>
-      <article>
-        <h3>Parallel Computing</h3>
-        <p>MPI-style collectives, CUDA list ranking, Chapel terasort, memory allocation, performance scripts, and cluster-oriented workflows.</p>
-      </article>
-      <article>
-        <h3>Web Systems</h3>
-        <p>Flask and SQLite applications, REST-style APIs, React frontends, static deployment, search-oriented service pages, and a basic HTTP server.</p>
-      </article>
-    </div>
-  </section>
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Writing" }}</h2>
-    <p class="section-intro">
-      Notes on software engineering, algorithms, security, distributed-system behavior, and software design.
-    </p>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
@@ -101,9 +29,6 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
-        <!-- {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%} -->
         {{ post.content | strip_html | truncatewords:35}}
       </li>
       {%- endfor -%}
@@ -111,5 +36,4 @@ layout: default
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
-
 </div>
