@@ -177,7 +177,32 @@ a {
 }
 
 .post-content img.avatar {
+	display: block;
+	margin: 0 auto 1.75rem;
 	border-radius: 50%;
+	object-fit: cover;
+}
+
+.site-footer {
+	margin-top: 4rem;
+	padding: 2.5rem 0 3rem;
+}
+
+.footer-heading {
+	margin-bottom: 1.25rem;
+}
+
+.footer-col-wrapper {
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.8fr) minmax(0, 1.3fr);
+	gap: 2rem;
+	align-items: start;
+}
+
+.footer-col {
+	float: none;
+	width: auto;
+	margin-bottom: 0;
 }
 
 @media (max-width: 760px) {
@@ -197,5 +222,15 @@ a {
 	.breadth-grid,
 	.post-list {
 		grid-template-columns: 1fr;
+	}
+
+	.site-footer {
+		margin-top: 3rem;
+		padding: 2rem 0 2.5rem;
+	}
+
+	.footer-col-wrapper {
+		grid-template-columns: 1fr;
+		gap: 1rem;
 	}
 }
