@@ -17,9 +17,9 @@ Capital One, Quicken Loans, and the Boyle Lab in Ann Arbor.
 This site is a collection of technical writing and notes on software design,
 backend reliability, algorithms, cryptography, and development workflow.
 
-Recent work includes .NET async upload frameworks, OneDrive and SharePoint blob
-storage reliability, Service Fabric and gRPC stateful services, Durable Task
-orchestration, C++ discrete event simulation, Java Spring Boot REST APIs, and
+Recent work includes .NET backend APIs as part of file upload and downloads,
+AI inferencing control plane development on Service Fabric and gRPC stateful services,
+C++ discrete event simulation, Java Spring Boot REST APIs, using
 AWS services including ECS and Lambda.
 
 His broader project work spans operating systems, virtual memory, networking,
