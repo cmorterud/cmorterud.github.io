@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-{% avatar {{ site.github_username }} size=200 %}
+<img src="/assets/images/cody-morterud.jpeg" alt="Cody Morterud" class="avatar" width="200" height="200">
 
 Cody Morterud is a senior software engineer based in Michigan. He works on backend
 systems, distributed services, storage reliability, and the engineering practices
