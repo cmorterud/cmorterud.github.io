@@ -5,29 +5,32 @@ permalink: /about/
 ---
 <img src="/assets/images/cody-morterud.jpeg" alt="Cody Morterud" class="avatar" width="200" height="200">
 
-Cody Morterud is a senior software engineer based in Michigan. He works on backend
-systems, distributed services, storage reliability, and the engineering practices
-that keep software understandable as it grows.
+Cody Morterud is a senior software engineer based in Michigan.
+His experience is primarily as an owner of backend production systems,
+developing, testing, releasing, and serving as on call for these systems.
 
-Cody graduated from the University of Michigan College of Engineering in 2019 and
-earned a Master of Science in Computer Science from Georgia Tech in 2023. He is
-currently a senior software engineer at Microsoft, with previous experience at
-Capital One, Quicken Loans, and the Boyle Lab in Ann Arbor.
+He is currently a senior software engineer at Microsoft, working on the
+OneDrive/SharePoint blob storage persistence layer. His recent work includes a
+resumable upload framework built around async producer-consumer streams,
+performance tracing and optimization, production
+metric aggregation, and AI-assisted Kusto investigation playbooks for reliability
+and performance analysis.
 
-This site is a collection of technical writing and notes on software design,
-backend reliability, algorithms, cryptography, and development workflow.
+Before that, Cody worked on Microsoft AI infrastructure, owning strongly
+consistent C# stateful services for lab provisioning, machine allocation, and
+workflow orchestration. He also built C++ discrete event simulation tooling for
+packet-switching research and previously owned Java Spring Boot microservices at
+Capital One running on AWS.
 
-Recent work includes .NET backend APIs as part of file upload and downloads,
-AI inferencing control plane development on Service Fabric and gRPC stateful services,
-C++ discrete event simulation, Java Spring Boot REST APIs, using
-AWS services including ECS and Lambda.
+Cody earned a Master of Science in Computer Science from Georgia Tech in 2023
+and a Bachelor of Science in Engineering in Computer Science from the University
+of Michigan in 2019.
 
-His broader project work spans operating systems, virtual memory, networking,
-security, compilers, high-performance computing, machine learning, and web
-systems. Those projects include user-level threading, page replacement, routing
-protocol simulations, elliptic-curve cryptography, LLVM dataflow analysis,
-Q-learning, market simulation, MPI-style collectives, CUDA, Chapel, Flask,
-SQLite, React, and static site deployment.
+This site is a collection of technical writing and notes on backend systems,
+distributed computing, algorithms, performance, cryptography, and development
+workflow. Recent side projects include Mass Arena, a real-time multiplayer
+browser game built with TypeScript, React, Node.js, WebSockets, PostgreSQL,
+Docker, and Azure.
 
 
 <!-- This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
